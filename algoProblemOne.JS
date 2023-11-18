@@ -9,6 +9,8 @@ const onlyOnce = function(nums) {
     for (const once of nums){
         if (!hash[once]) {
             hash[once] = 1;
+        }else {
+            delete hash[once]
         }
     }
     return Object.keys(hash)[0];
