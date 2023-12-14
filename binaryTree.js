@@ -3,6 +3,9 @@
 // Pseudocode problem: You have the root of the tree what is the depth/length of the longest node
 
 var maxDepth = function(root) {
+    if(!root) return null;
+    let max = Math.max(maxDepth(root.left), maxDepth(root.right));
+    return max + 1;
 
 };
 
